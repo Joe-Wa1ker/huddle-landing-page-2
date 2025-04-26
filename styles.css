@@ -1,0 +1,377 @@
+/* poppins-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Fonts/poppins-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* open-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Fonts/open-sans-v40-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* open-sans-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./Fonts/open-sans-v40-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* open-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./Fonts/poppins-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /*=====================*/
+  /*===== CSS Reset =====*/
+  /*=====================*/
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  /*===== Custom Properties =====*/
+
+  :root {
+    /* Colors */
+    --primary-pink: hsl(322, 100%, 66%);
+    --primary-light-pink: hsl(321, 100%, 78%);
+    --primary-light-red: hsl(0, 100%, 63%);
+    --neutral-dark-cyan: hsl(192, 100%, 9%);
+    --neutral-pale-blue: hsl(207, 100%, 98%);
+
+    /* Font sizes */
+    --p-text-font-size: 1.3rem;
+    --cta-btn-font-size: 1.1rem;
+
+    /* Font weights */
+    --cta-btn-font-weight: 700;
+    --stats-figure-font-weight: 400;
+    --newsletter__title-font-weight: 400;
+  }
+
+  /*==================*/
+  /*===== 375px+ =====*/
+  /*==================*/
+
+
+  /*===== Global Styles =====*/
+
+  body {
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  header,
+  main, 
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--neutral-dark-cyan);
+  }
+
+  .header__top, 
+  .header__hero, 
+  .header__stats, 
+  .feature, 
+  .main__prompt, 
+  .newsletter, 
+  .footer__contact {
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  } /* temp style - open */
+
+  
+  /*==================*/
+  /*===== Header =====*/
+  /*==================*/
+
+  header {
+    padding: 2.5em 0 10em;
+    gap: 8em;
+    background-image: url(./Images/bg-section-top-mobile-1.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  /* Header__top */
+  
+  .header__top {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__top-logo {
+    width: 10em;
+    height: auto;
+  }
+
+  .header__top-cta {
+    color: var(--primary-light-pink);
+    padding: 0.3em 1.5em;
+    border: 1px solid var(--primary-light-pink);
+    border-radius: 10rem;
+  }
+
+  /* Header__hero */
+
+  .header__hero {
+    width: 77.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .header__hero-title {
+    color: var(--neutral-dark-cyan);
+    font-size: 2.3rem;
+  }
+
+  .header__hero-text {
+    font-size: var(--p-text-font-size);
+    color: var(--neutral-dark-cyan); /* Revisit */
+  }
+
+  .header__hero-cta {
+    margin: 2em auto 6em;
+    padding: 0.75em 2.5em;
+    border-radius: 10rem;
+    box-shadow: 0 0.5em 0.5em grey;
+    font-size: var(--cta-btn-font-size);
+    font-weight: var(--cta-btn-font-weight);
+    color: var(--neutral-pale-blue);
+    background-color: var(--primary-pink);
+  }
+
+  .header__hero-cta:hover {
+    background-color: var(--primary-light-pink);
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+  }
+
+  /* Header__stats */
+
+  .header__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+  }
+
+  .header__stats-image {
+    width: 17.5%;
+    height: auto;
+  }
+
+  .header__stats-figure {
+    font-size: 5rem;
+    font-weight: var(--stats-figure-font-weight);
+    text-align: center;
+  }
+
+  .header__stats-text {
+    font-size: var(--p-text-font-size);
+    color: grey;
+    text-align: center;
+  }
+
+  /*================*/
+  /*===== Main =====*/
+  /*================*/
+
+  /* feature */
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 8em 0;
+  }
+
+  .feature__image {
+    width: 77.5%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .feature__container {
+    margin: 0 auto;
+    width: 77.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .feature__title { 
+    font-size: 1.7rem;
+  }
+  
+  .feature__text {
+    font-size: var(--p-text-font-size);
+  }
+
+  /* grow__together */
+
+  .grow__together {
+    background-color: var(--neutral-pale-blue);
+  }
+
+  /* flowing__conversations */
+
+  .flowing__conversations {
+    background-image: url(./Images/bg-section-bottom-mobile-1.svg), url(./Images/bg-section-top-mobile-2.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    padding: 20em 0;
+  }
+
+  /* your__users */
+
+  .your__users {
+   background-color: var(--neutral-pale-blue);
+  } 
+
+  /* main__prompt */
+
+  .main__prompt {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 17em 0 30em;
+    text-align: center;
+    background-image: url(./Images/bg-section-bottom-mobile-2.svg), url(./Images/bg-footer-top-mobile.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+  }
+
+  .main__prompt-title {
+    font-size: 2.3rem;
+  }
+
+  .main__prompt-cta { 
+    margin: 0 auto;
+    padding: 0.75em 2.5em;
+    border-radius: 10rem;
+    box-shadow: 0 0.5em 0.5em grey;
+    font-size: var(--cta-btn-font-size);
+    font-weight: var(--cta-btn-font-weight);
+    color: var(--neutral-pale-blue);
+    background-color: var(--primary-pink);
+  }
+
+  .main__prompt-cta:hover {
+    background-color: var(--primary-light-pink);
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+  }
+
+  /*==================*/
+  /*===== Footer =====*/
+  /*==================*/
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    color: white;
+    background-color: var(--neutral-dark-cyan);
+  }
+
+  /* newsletter */
+
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 85%;
+    padding: 3em 0;
+  }
+
+  .newsletter__title {
+    font-size: 2rem;
+    font-weight: var(--newsletter__title-font-weight);
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .newsletter__text {
+    font-size: var(--p-text-font-size);
+    text-wrap: balance;
+  }
+
+  .visually-hidden {
+    /* Visually hides label, whilst maintaining accessibility for screen readers */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+  }
+
+  .error-message {
+    /* Hide error by default */
+    display: none;
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+
+  input:invalid:focus + .error-message,
+  input:invalid:out-of-range + .error-message,
+  input:invalid:user-invalid + .error-message {
+    /* Show when input is invalid and touched */
+    display: block;
+  }
+
+  /* footer__contact */
+
+  .footer__contact {
+    width: 77.5%;
+  }
+
+  
+

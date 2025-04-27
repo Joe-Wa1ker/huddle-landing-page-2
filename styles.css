@@ -59,6 +59,11 @@
     --neutral-pale-blue: hsl(207, 100%, 98%);
 
     /* Font sizes */
+    --h1-text-font-size: 2.3rem;
+    --h2-text-font-size: 5rem;
+    --h3-text-font-size: 1.7rem;
+    --h4-text-font-size: 2.3rem;
+    --h5-text-font-size: 2rem;
     --p-text-font-size: 1.3rem;
     --cta-btn-font-size: 1.1rem;
 
@@ -111,12 +116,6 @@
   a {
     text-decoration: none;
   }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  } /* temp style - open */
-
   
   /*==================*/
   /*===== Header =====*/
@@ -164,12 +163,12 @@
 
   .header__hero-title {
     color: var(--neutral-dark-cyan);
-    font-size: 2.3rem;
+    font-size: var(--h1-text-font-size);
   }
 
   .header__hero-text {
     font-size: var(--p-text-font-size);
-    color: var(--neutral-dark-cyan); /* Revisit */
+    color: var(--neutral-dark-cyan);
   }
 
   .header__hero-cta {
@@ -203,7 +202,7 @@
   }
 
   .header__stats-figure {
-    font-size: 5rem;
+    font-size: var(--h2-text-font-size);
     font-weight: var(--stats-figure-font-weight);
     text-align: center;
   }
@@ -225,6 +224,7 @@
     flex-direction: column;
     gap: 4em;
     padding: 8em 0;
+    width: 100%;
   }
 
   .feature__image {
@@ -243,7 +243,7 @@
   }
 
   .feature__title { 
-    font-size: 1.7rem;
+    font-size: var(--h3-text-font-size);
   }
   
   .feature__text {
@@ -277,6 +277,7 @@
     display: flex;
     flex-direction: column;
     gap: 3em;
+    width: 100%;
     padding: 17em 0 30em;
     text-align: center;
     background-image: url(./Images/bg-section-bottom-mobile-2.svg), url(./Images/bg-footer-top-mobile.svg);
@@ -285,7 +286,7 @@
   }
 
   .main__prompt-title {
-    font-size: 2.3rem;
+    font-size: var(--h4-text-font-size);
   }
 
   .main__prompt-cta { 
@@ -313,6 +314,7 @@
     display: flex;
     flex-direction: column;
     gap: 6em;
+    padding-bottom: 5em;
     color: white;
     background-color: var(--neutral-dark-cyan);
   }
@@ -322,13 +324,13 @@
   .newsletter {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
-    width: 85%;
+    gap: 1.2em;
+    width: 80%;
     padding: 3em 0;
   }
 
   .newsletter__title {
-    font-size: 2rem;
+    font-size: var(--h5-text-font-size);
     font-weight: var(--newsletter__title-font-weight);
     color: white;
     text-transform: uppercase;
@@ -337,6 +339,12 @@
   .newsletter__text {
     font-size: var(--p-text-font-size);
     text-wrap: balance;
+  }
+
+  .newsletter__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 
   .visually-hidden {
@@ -350,6 +358,12 @@
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border: 0;
+  }
+
+  #email {
+    width: 100%;
+    padding: 0.9rem 0;
+    border-radius: 0.7rem;
   }
 
   .error-message {
@@ -367,11 +381,305 @@
     display: block;
   }
 
+  .newsletter__subscribe-button {
+    width: 50%;
+    padding: 1.2rem 0;
+    border-radius: 0.7rem;
+    font-size: var(--p-text-font-size);
+    font-weight: var(--cta-btn-font-weight);
+    background-color: var(--primary-pink);
+    color: var(--neutral-pale-blue);
+    align-self: flex-end;
+  }
+
+  .newsletter__subscribe-button:hover {
+    background-color: var(--primary-light-pink);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+  }
+
   /* footer__contact */
 
   .footer__contact {
     width: 77.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
   }
+
+  /* footer__logo-text-wrap */
+
+  .footer__logo-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .footer__logo {
+    width: 16rem;
+    height: auto;
+  }
+
+  .footer__contact-text {
+    font-size: var(--p-text-font-size);
+  }
+
+  /* footer__contact-address */
+
+  .footer__contact-address {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .footer__contact-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+
+  .footer__contact-item a {
+    color: white;
+    font-size: var(--p-text-font-size);
+    font-style: normal;
+  }
+
+  /* footer__contact-social */
+
+  .footer__contact-social {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+
+  .footer__contact-social a { 
+    color: white;
+  }
+
+  .footer__contact-social a:hover {
+    color: aqua;
+  }
+
+  /*=========================*/
+  /*===== 376px - 900px =====*/
+  /*=========================*/
+
+  @media screen and (min-width: 376px) and (max-width:900px) {
+
+    .header__hero {
+      max-width: 558px;
+    }
+  }
+
+  /*===================*/
+  /*===== Tablets =====*/
+  /*===================*/
+
+  @media screen and (min-width: 750px) and (max-width:799px) {
+
+    footer {
+      padding-bottom: 12em;
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width:899px) {
+
+    footer {
+      padding-bottom: 27.5em;
+    }
+  }
+
+  @media screen and (min-width: 900px) and (max-width:1050px) {
+
+    footer {
+      padding-bottom: 50em;
+    }
+  }
+
+  /*==================*/
+  /*===== 376px+ =====*/
+  /*==================*/
+
+  @media screen and (min-width:376px) {
+    
+    /* Header */
+
+    header {
+      background-image: url(./Images/bg-section-top-desktop-1.svg);
+      background-repeat: repeat-x;}
+
+    /* Features */ 
+
+    .flowing__conversations {
+      background-image: url(./Images/bg-section-bottom-desktop-1.svg), url(./Images/bg-section-top-desktop-2.svg);
+      background-repeat: repeat-x;
+    }
+
+    .main__prompt {
+      background-image: url(./Images/bg-section-bottom-desktop-2.svg), url(./Images/bg-footer-top-desktop.svg);
+      background-repeat: repeat-x;
+    }
+  }
+
+    /*==================*/
+    /*===== 750px+ =====*/
+    /*==================*/
+
+    @media screen and (min-width:750px) {
+
+      /* Header */ 
+
+      .header__top-logo {
+        width: 12em;
+        height: auto;
+      }
+
+      /* Header__hero */ 
+
+      .header__hero-cta {
+        padding: 1.25em 5em;
+      }
+
+      /* Header__stats */
+
+      .header__stats {
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-around;
+      }
+
+      /* Feature */ 
+
+      .feature__image {
+        width: 45%;
+      }
+
+      .feature__container {
+        width: 60%;
+      }
+
+      /* Footer */
+
+      footer {
+        flex-direction: row-reverse;
+        gap: 3em;
+      }
+
+      .newsletter {
+        width: 40%;
+      }
+
+      .footer__contact {
+        width: 40%;
+      }
+    }
+
+    /*==================*/
+    /*===== 901px+ =====*/
+    /*==================*/
+   
+
+    @media screen and (min-width:901px) {
+      
+      :root {
+        --h1-text-font-size: 2.76rem;
+        --h2-text-font-size: 6rem;
+        --h3-text-font-size: 2.04rem;
+        --h4-text-font-size: 2.76rem;
+        --h5-text-font-size: 2.4rem;
+        --p-text-font-size: 1.56rem;
+        --cta-btn-font-size: 1.32rem;
+      }
+
+      /* Header */ 
+      
+      header {
+        padding: 2.5em 0 18em;
+      }
+
+      /* header__hero */
+
+      .header__hero {
+        max-width: 900px;
+      }
+
+      .header__hero-text {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      /* Main */ 
+
+      .feature {
+        flex-direction: row-reverse;
+      }
+
+      .flowing__conversations {
+        flex-direction: row;
+      }
+
+      .feature__container {
+        text-align: left;
+        margin: auto;
+        width: 35%;
+      }
+
+      .feature__image {
+        width: 35%;
+      }
+
+      .main__prompt {
+        padding: 30em 0;
+      }
+
+      /* Footer */ 
+
+      .newsletter__title, .newsletter__text {
+        max-width: 350px;
+      }
+
+      .newsletter__form {
+        flex-direction: row;
+        gap: 2.5em;
+      }
+
+      #email {
+        padding: 1em 14em 1em 1em;
+      }
+
+      .newsletter__subscribe-button {
+        width: 30%;
+        align-self: auto;
+      }
+
+      .footer__contact-text {
+        max-width: 350px;
+      }
+
+    }
+
+    /*==================*/
+    /*===== 1441px+ =====*/
+    /*==================*/
+   
+
+    @media screen and (min-width:1441px) {
+      
+      header {
+        background-image: none;
+      }
+
+      .feature, 
+      .main__prompt {
+        background-image: none;
+        padding: 8em 0;
+      }
+      
+      footer {
+        padding: 7em 0; 
+      }
+    }
 
   
 
